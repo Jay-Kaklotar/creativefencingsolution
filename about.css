@@ -1,0 +1,432 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.cotainer {
+    /* border: 1px solid red; */
+    max-width: 1300px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav start */
+.header_logo img {
+    width: 10rem;
+}
+
+.header_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.header_nav h3 {
+    display: none;
+}
+
+.header_nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0 50px;
+    margin-bottom: 10px;
+}
+
+.header_nav ul li a {
+    position: relative;
+    color: #273272;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 0px;
+    font-weight: 600;
+}
+
+.header_nav ul li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #273272;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.header_nav ul li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+@media screen and (max-height: 300px) {
+    .header_nav ul {
+        margin-top: 40px;
+    }
+}
+
+#nav_icon {
+    display: none;
+}
+
+/* nav end */
+
+/* about */
+.about_bg {
+    position: relative;
+    height: 100%;
+}
+
+.about_bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(./img/1.jpg);
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.92;
+}
+
+.about_bg h1 {
+    color: #fff;
+    font-size: 70px;
+    padding-top: 11rem;
+    text-shadow: 0px 0px 12px #000000b8;
+    text-align: center;
+}
+
+/* about */
+
+/* whoweare */
+.whoweare_item {
+    text-align: center;
+    margin-top: 17rem;
+}
+
+.whoweare {
+    width: 50%;
+}
+
+.different {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.whoweare h3,
+.different h3 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.whoweare p,
+.different p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.whoweare video {
+    width: 492px;
+    height: 297px;
+    margin-top: 50px;
+}
+
+/* /whoweare */
+
+/* TEAM MEMBERS */
+.members {
+    background-color: #E8EAF6;
+    text-align: center;
+}
+
+.team_members {
+    padding: 40px 0;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.members_item h3 {
+    font-size: 30px;
+}
+
+.members_item p {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 15px 0 8px 0;
+}
+
+.members_item h4 {
+    font-size: 20px;
+    font-family: math;
+    font-weight: 200;
+}
+
+/* TEAM MEMBERS */
+
+/* satisfaction */
+.satisfaction {
+    background-color: #364493;
+}
+
+.satisfaction_item {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 1040px;
+}
+
+.satisfaction_item h3 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.satisfaction_item p {
+    font-size: 20px;
+    color: #fff;
+    margin: 30px 0;
+    font-family: math;
+}
+
+.satisfaction_item h4 {
+    font-size: 22px;
+    color: #fff;
+}
+
+/* satisfaction */
+
+/*  */
+.footer {
+    background-color: #1A237E;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    color: #fff;
+}
+/*  */
+@media only screen and (max-width:1200px) {
+
+    /* nav  */
+    .header_nav {
+        transform: translate(90rem, 0px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: all 0.3s;
+        background-color: #273272;
+        width: 50%;
+        height: 100%;
+        padding-top: 7rem;
+    }
+
+    .header_nav h3 {
+        display: inline-block;
+        color: #fff;
+        font-size: 21px;
+        margin: 0px 0 30px 14px;
+        border-bottom: 1px solid #0088ff;
+        padding-bottom: 5px;
+        position: relative;
+        bottom: 58px;
+    }
+
+    .header_nav ul {
+        gap: 43px 0px;
+        margin-bottom: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_nav ul li a {
+        color: #fff;
+    }
+
+    #nav_icon {
+        display: block;
+        font-size: 39px;
+        margin-bottom: 10px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    /* nav  */
+}
+
+@media only screen and (max-width:1024px) {
+    .whoweare_item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whoweare {
+        width: 100%;
+    }
+
+    .team_members {
+        justify-content: center;
+        gap: 30px 0px;
+    }
+
+    .members_item {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    /* nav  */
+    .header_nav {
+        transform: translate(90rem, 0px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+        padding-top: 10rem;
+    }
+
+    .header_nav h3 {
+        bottom: 110px;
+    }
+
+    /* nav */
+}
+
+@media only screen and (max-width:575px) {
+
+    /* nav  */
+    .header_logo img {
+        width: 7rem;
+    }
+
+    .header_nav {
+        padding-top: 7rem;
+    }
+
+    .header_nav ul li a {
+        font-size: 16px;
+    }
+
+    .header_nav ul {
+        gap: 30px 0px;
+    }
+
+    .header_nav h3 {
+        bottom: 79px;
+        margin: 0 0 0 16px;
+    }
+
+    #nav_icon {
+        margin-bottom: 15px;
+    }
+
+    /* nav  */
+
+    .about_bg::before {
+        height: 250px;
+    }
+
+    .about_bg h1 {
+        font-size: 50px;
+        padding-top: 6rem;
+    }
+
+    .whoweare_item {
+        text-align: center;
+        margin-top: 7.5rem;
+    }
+
+    .different {
+        margin-top: 2rem;
+    }
+
+    .whoweare p,
+    .different p {
+        margin-top: 10px;
+        font-size: 15px;
+        text-align: left !important;
+    }
+
+    .whoweare video {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .whoweare h3,
+    .different h3 {
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .team_members {
+        padding: 20px 0;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+        gap: 20px 0px;
+    }
+
+    .members_item h3 {
+        font-size: 18px;
+    }
+
+    .members_item p {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 12px 0 5px 0;
+    }
+
+    .members_item h4 {
+        font-size: 14px;
+        font-family: math;
+        font-weight: 200;
+    }
+
+    .satisfaction_item {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .satisfaction_item h3 {
+        font-size: 24px;
+    }
+
+    .satisfaction_item p {
+        font-size: 14px;
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    .satisfaction_item h4 {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .footer {
+        padding: 16px 0;
+        font-size: 12px;
+    }
+}
